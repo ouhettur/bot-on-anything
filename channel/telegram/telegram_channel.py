@@ -1,12 +1,15 @@
 from concurrent.futures import ThreadPoolExecutor
 import io
+import os
 import requests
 import telebot
 from common import const
 from common.log import logger
 from channel.channel import Channel
 from config import channel_conf_val, channel_conf
-bot = telebot.TeleBot(token=channel_conf(const.TELEGRAM).get('bot_token'))
+bot = telebot.TeleBot(
+    token=channel_conf(const.TELEGRAM).get('bot_token') or os.getenv("TELEGRAM_BOT_TOKEN")
+)
 thread_pool = ThreadPoolExecutor(max_workers=8)
 
 @bot.message_handler(commands=['help'])
