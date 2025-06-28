@@ -1,0 +1,21 @@
+{
+  "model": {
+    "type": "claude",
+    "claude": {
+      "api_key": "",
+      "model": ""
+    }
+  },
+  "channel": {
+    "type": ["telegram"],
+    "telegram": {
+      "bot_token": ""
+    }
+  },
+  "memory": {
+    "type": "json"
+  },
+  "common": {
+    "clear_memory_commands": ["#clear_memory"]
+  }
+}
