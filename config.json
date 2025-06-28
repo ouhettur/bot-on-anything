@@ -1,22 +1,20 @@
 {
   "model": {
-    "type": "${LLM_MODEL}",
+    "type": "claude",
     "claude": {
-      "api_key": "${LLM_API_KEY}",
-      "model": "${LLM_MODEL_NAME}"
+      "api_key": "",
+      "model": "",
+      "character_desc": ""
     }
   },
   "channel": {
-    "type": ["${CHANNELS}"],
+    "type": ["telegram"],
     "telegram": {
-      "bot_token": "${TELEGRAM_BOT_TOKEN}"
+      "bot_token": ""
     }
   },
   "memory": {
-    "type": "${MEMORY_TYPE}"
-  },
-  "prompt": {
-    "system_prompt": "${PROMPT}"
+    "type": "json"
   },
   "common": {
     "clear_memory_commands": ["#clear_memory"]
